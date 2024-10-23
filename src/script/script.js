@@ -36,14 +36,22 @@ if(e.target != Hamburger && e.target != navMenu){
 // Dark mode toggle
 const darkToggle = document.querySelector('#dark-toggle');
 const html = document.querySelector('html');
+const lightImage = document.querySelector('.light-image');
+const darkImage = document.querySelector('.dark-image');
+
+
 
 // Set toggle sesuai mode saat halaman dimuat
 if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
     darkToggle.checked = true;
     html.classList.add('dark');
+    lightImage.classList.add('hidden');
+    darkImage.classList.remove('hidden');
 } else {
     darkToggle.checked = false;
     html.classList.remove('dark');
+    lightImage.classList.remove('hidden');
+    darkImage.classList.add('hidden');
 }
 
 // Event listener untuk toggle dark mode
@@ -51,9 +59,13 @@ darkToggle.addEventListener('click', function() {
     if (darkToggle.checked) {
         html.classList.add('dark');
         localStorage.theme = 'dark';
+        lightImage.classList.add('hidden');
+    darkImage.classList.remove('hidden');
     } else {
         html.classList.remove('dark');
         localStorage.theme = 'light';
+        lightImage.classList.remove('hidden');
+    darkImage.classList.add('hidden');
     }
 });
 

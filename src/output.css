@@ -1215,6 +1215,20 @@ html,body{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+@media (max-width: 639px) {
+  .mobile {
+    display: none;
+    /* Sembunyikan pada layar mobile */
+  }
+}
+
+@media (min-width: 640px) {
+  .mobile {
+    display: block;
+    /* Tampilkan pada layar sm dan lebih besar */
+  }
+}
+
 @keyframes pulse {
   50% {
     opacity: .5;
@@ -1334,12 +1348,6 @@ html,body{
 
   .md\:w-1\/3 {
     width: 33.333333%;
-  }
-
-  .md\:scale-125 {
-    --tw-scale-x: 1.25;
-    --tw-scale-y: 1.25;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
   .md\:text-lg {
@@ -1471,6 +1479,7 @@ html,body{
     width: 83.333333%;
   }
 }
+
 
 
 

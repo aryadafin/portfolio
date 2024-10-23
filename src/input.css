@@ -35,6 +35,18 @@ html,body{
 #dark-toggle:checked ~ label div.toggle-circle {
     @apply translate-x-3;
 }
+@media (max-width: 639px) {
+    .mobile {
+        display: none; /* Sembunyikan pada layar mobile */
+    }
+}
+
+@media (min-width: 640px) {
+    .mobile {
+        display: block; /* Tampilkan pada layar sm dan lebih besar */
+    }
+}
+
 
 
 
